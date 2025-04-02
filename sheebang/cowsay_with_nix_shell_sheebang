@@ -1,0 +1,4 @@
+#!/usr/bin/env -S nix shell nixpkgs#fish nixpkgs#cowsay --command fish
+#FIXME: the above sheebang only works with an experimental config flag at this point (2025/04). Review in a few years
+set -x GREETING "hello with pkgx!"
+cowsay $GREETING
