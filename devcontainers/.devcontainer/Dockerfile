@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:ubuntu24.04
+FROM mcr.microsoft.com/devcontainers/base:debian
 
 COPY --from=jdxcode/mise /usr/local/bin/mise /usr/local/bin/
 
