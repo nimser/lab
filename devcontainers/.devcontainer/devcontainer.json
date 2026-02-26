@@ -12,6 +12,7 @@
   "remoteEnv": {
     "DISPLAY": "${localEnv:DISPLAY}",
     "GITHUB_TOKEN": "${localEnv:GITHUB_PAT_PUBLIC_REPO}",
+    "AQUA_GITHUB_TOKEN": "${localEnv:GITHUB_PAT_PUBLIC_REPO}",
     "GIT_COMMITTER_EMAIL": "${localEnv:GIT_COMMITTER_EMAIL}",
     "GIT_COMMITTER_NAME": "${localEnv:GIT_COMMITTER_NAME}",
     "GIT_AUTHOR_NAME": "${localEnv:GIT_AUTHOR_NAME}",
