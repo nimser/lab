@@ -28,6 +28,7 @@
     "source=${localEnv:CHEZMOI_SOURCE_DIR},target=/home/vscode/.local/share/chezmoi,type=bind"
   ],
   "runArgs": [
+    "--shm-size=2g",
     "--net=host"
   ],
   "customizations": {
