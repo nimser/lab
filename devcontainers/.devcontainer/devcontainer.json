@@ -5,7 +5,7 @@
   },
   "features": {
     "ghcr.io/devcontainers/features/nix:1": {
-      "multiUser": false
+      "multiUser": true
     },
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
