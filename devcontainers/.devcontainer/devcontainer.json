@@ -28,8 +28,10 @@
     "source=${localEnv:CHEZMOI_SOURCE_DIR},target=/home/vscode/.local/share/chezmoi,type=bind"
   ],
   "runArgs": [
+    "--net=host",
     "--shm-size=2g",
-    "--net=host"
+    "--cap-add=SYS_ADMIN",
+    "--security-opt=seccomp=unconfined"
   ],
   "customizations": {
     "vscode": {
