@@ -26,7 +26,8 @@
   "mounts": [
     "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
     "source=${localEnv:HOME}/.ssh/git-signing.pub,target=/mnt/host/git-signing.pub,type=bind,readonly",
-    "source=${localEnv:CHEZMOI_SOURCE_DIR},target=/home/vscode/.local/share/chezmoi,type=bind"
+    "source=${localEnv:CHEZMOI_SOURCE_DIR},target=/home/vscode/.local/share/chezmoi,type=bind",
+    "source=${localEnv:HOME}/skills,target=/home/vscode/skills,type=bind"
   ],
   "runArgs": [
     "--net=host",
@@ -57,6 +58,6 @@
       }
     }
   },
-  "onCreateCommand": "sudo chown -R vscode:vscode /home/vscode/.local && sudo chown vscode:vscode /home/vscode/.ssh",
+  "onCreateCommand": "sudo chown -R vscode:vscode /home/vscode/.local && mkdir -p /home/vscode/.ssh && sudo chown vscode:vscode /home/vscode/.ssh && mkdir -p /home/vscode/.local/state/age-plugin-tpm /home/vscode/.local/state/age-plugin-yubikey",
   "postCreateCommand": ".devcontainer/scripts/setup && bash /home/vscode/.local/share/chezmoi/setup"
 }
