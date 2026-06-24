@@ -6,3 +6,12 @@ COPY --from=jdxcode/mise /usr/local/bin/mise /usr/local/bin/
 RUN apt-get -y update && apt-get install -y --no-install-recommends x11-utils && \
     echo 'eval "$(mise activate bash)"' >> /home/vscode/.bashrc && \
     echo 'eval "$(mise activate zsh)"' >> /home/vscode/.zshrc
+
+RUN apt-get install -y --no-install-recommends \
+        fonts-liberation \
+        fonts-noto-core \
+        fontconfig && \
+        rm -rf /var/lib/apt/lists/* && \
+        fc-cache -fv
+
+CMD ["fc-list"]
